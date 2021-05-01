@@ -1,0 +1,62 @@
+Quartus II 32-bit
+Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+41
+5474
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Exercicio_2
+# storage
+db|Exercicio_2.(0).cnf
+db|Exercicio_2.(0).cnf
+# case_insensitive
+# source_file
+exercicio_2.bdf
+bc5bdc8d78cd98440de7aedaf442070
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# macro_sequence
+
+# end
+# entity
+Exercicio_2_Semaforo
+# storage
+db|Exercicio_2.(1).cnf
+db|Exercicio_2.(1).cnf
+# case_insensitive
+# source_file
+exercicio_2_semaforo.bdf
+f3b14028eae1be2ea2b46f739294f35
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# complete
+
