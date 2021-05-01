@@ -1,0 +1,385 @@
+Quartus II 32-bit
+Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+15
+1593
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+Divisor_Frequencia
+# storage
+db|Cronometro.(0).cnf
+db|Cronometro.(0).cnf
+# case_insensitive
+# source_file
+divisor_frequencia.bdf
+62432b9c7e1a1472a16d9f66ba14e49
+26
+# internal_option {
+BLOCK_DESIGN_NAMING
+AUTO
+}
+# hierarchies {
+|
+}
+# macro_sequence
+
+# end
+# entity
+cronometro
+# storage
+db|Cronometro.(1).cnf
+db|Cronometro.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+cronometro.vhd
+f62eb1d21932e689cfae1b2b97bd2ed
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+cronometro:inst
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter1
+# storage
+db|Cronometro.(2).cnf
+db|Cronometro.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+lpm_counter1.vhd
+779a7930ee624dc6dd995e65de334e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+lpm_counter1:inst2
+}
+# macro_sequence
+
+# end
+# entity
+lpm_counter
+# storage
+db|Cronometro.(3).cnf
+db|Cronometro.(3).cnf
+# case_insensitive
+# source_file
+lpm_counter.tdf
+b243fc5a1355e8ba9c5f2f8eae4612a
+7
+# user_parameter {
+AUTO_CARRY_CHAINS
+ON
+AUTO_CARRY
+USR
+IGNORE_CARRY_BUFFERS
+OFF
+IGNORE_CARRY
+USR
+AUTO_CASCADE_CHAINS
+ON
+AUTO_CASCADE
+USR
+IGNORE_CASCADE_BUFFERS
+OFF
+IGNORE_CASCADE
+USR
+LPM_WIDTH
+24
+PARAMETER_SIGNED_DEC
+USR
+LPM_DIRECTION
+UP
+PARAMETER_UNKNOWN
+USR
+LPM_MODULUS
+0
+PARAMETER_UNKNOWN
+DEF
+LPM_AVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_SVALUE
+UNUSED
+PARAMETER_UNKNOWN
+DEF
+LPM_PORT_UPDOWN
+PORT_UNUSED
+PARAMETER_UNKNOWN
+USR
+DEVICE_FAMILY
+Cyclone IV E
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN
+MANUAL
+PARAMETER_UNKNOWN
+USR
+CARRY_CHAIN_LENGTH
+48
+CARRY_CHAIN_LENGTH
+USR
+NOT_GATE_PUSH_BACK
+ON
+NOT_GATE_PUSH_BACK
+USR
+CARRY_CNT_EN
+SMART
+PARAMETER_UNKNOWN
+DEF
+LABWIDE_SCLR
+ON
+PARAMETER_UNKNOWN
+DEF
+USE_NEW_VERSION
+TRUE
+PARAMETER_UNKNOWN
+DEF
+CBXI_PARAMETER
+cntr_sqh
+PARAMETER_UNKNOWN
+USR
+}
+# used_port {
+q9
+-1
+3
+q8
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q23
+-1
+3
+q22
+-1
+3
+q21
+-1
+3
+q20
+-1
+3
+q2
+-1
+3
+q19
+-1
+3
+q18
+-1
+3
+q17
+-1
+3
+q16
+-1
+3
+q15
+-1
+3
+q14
+-1
+3
+q13
+-1
+3
+q12
+-1
+3
+q11
+-1
+3
+q10
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+clock
+-1
+3
+}
+# include_file {
+dffeea.inc
+f11711657cd42ee78437f4349496034
+lpm_constant.inc
+97ffb7e3fef9ce9fce4eff8455d5da5
+alt_counter_stratix.inc
+3e1db420f0a6e888a1525f4eff14d5be
+lpm_add_sub.inc
+144a73b61081a2a03554ff5acc5e8842
+lpm_decode.inc
+10da69a8bbd590d66779e7a142f73790
+cmpconst.inc
+fe4bfdfa5310384231b99c696fe2e348
+lpm_counter.inc
+c5cfeeabc5f2ab60b3453f6abbc42b41
+aglobal111.inc
+9cc1f9de5ad83fc94dd171c3f7986bd
+lpm_compare.inc
+bbd3e8c93afb7320934629e5fb11566
+}
+# hierarchies {
+lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component
+}
+# macro_sequence
+
+# end
+# entity
+cntr_sqh
+# storage
+db|Cronometro.(4).cnf
+db|Cronometro.(4).cnf
+# case_insensitive
+# source_file
+db|cntr_sqh.tdf
+8d84d29ac5925b86a975699daeb395a
+7
+# used_port {
+q9
+-1
+3
+q8
+-1
+3
+q7
+-1
+3
+q6
+-1
+3
+q5
+-1
+3
+q4
+-1
+3
+q3
+-1
+3
+q23
+-1
+3
+q22
+-1
+3
+q21
+-1
+3
+q20
+-1
+3
+q2
+-1
+3
+q19
+-1
+3
+q18
+-1
+3
+q17
+-1
+3
+q16
+-1
+3
+q15
+-1
+3
+q14
+-1
+3
+q13
+-1
+3
+q12
+-1
+3
+q11
+-1
+3
+q10
+-1
+3
+q1
+-1
+3
+q0
+-1
+3
+clock
+-1
+3
+}
+# hierarchies {
+lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated
+}
+# macro_sequence
+
+# end
+# complete
+

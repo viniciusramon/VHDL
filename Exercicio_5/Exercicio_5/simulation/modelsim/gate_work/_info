@@ -1,0 +1,52 @@
+m255
+K3
+13
+cModel Technology
+Z0 dE:\ViniciusRamon\Digital\Exercicio_5\simulation\modelsim
+Edivisor_frequencia
+Z1 w1426340503
+Z2 DPx10 cycloneive 20 cycloneive_atom_pack 0 22 JXN2=2dBmk60UUeC1Ud>;1
+Z3 DPx10 cycloneive 21 cycloneive_components 0 22 IlzlMe[@YjW3?h4::UWnM2
+Z4 DPx4 ieee 16 vital_primitives 0 22 9W@YP9_VCb?_GCJ8e:;YQ0
+Z5 DPx6 altera 11 dffeas_pack 0 22 oY7WPe2I:Taj0>HV`A`AH0
+Z6 DPx4 ieee 12 vital_timing 0 22 7h8zz2S4HVg:a;2TBMI[j1
+Z7 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z8 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 H[E=U;zSVlD;ca@gnkzIO0
+Z10 dE:\ViniciusRamon\Digital\Exercicio_5\simulation\modelsim
+Z11 8Cronometro.vho
+Z12 FCronometro.vho
+l0
+L36
+V;^<<VX7HM;OW26KNkRjlO3
+!s100 BV3MHT?XHWAQ=ce=lBgOb0
+Z13 OV;C;10.1d;51
+31
+!i10b 1
+Z14 !s108 1426340510.062000
+Z15 !s90 -reportprogress|300|-93|-work|work|Cronometro.vho|
+Z16 !s107 Cronometro.vho|
+Z17 o-93 -work work -O0
+Z18 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 18 divisor_frequencia 0 22 ;^<<VX7HM;OW26KNkRjlO3
+l166
+L59
+VDDB:72]1Zd2XIAP^Ugce;0
+!s100 ]o?zF9oLQg:[f8P2AC=[33
+R13
+31
+!i10b 1
+R14
+R15
+R16
+R17
+R18
