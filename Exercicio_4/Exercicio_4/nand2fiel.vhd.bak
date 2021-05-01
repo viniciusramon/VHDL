@@ -1,0 +1,15 @@
+
+
+entity nand2fiel is
+
+	port(
+		a : in bit;
+		b : in bit;
+		saida : out bit
+	
+	
+	);
+
+
+end nand2fiel;
+

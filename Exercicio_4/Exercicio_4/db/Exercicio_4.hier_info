@@ -1,0 +1,5 @@
+|Problema_4
+clk => meuff.CLK
+reset => meuff.ACLR
+
+

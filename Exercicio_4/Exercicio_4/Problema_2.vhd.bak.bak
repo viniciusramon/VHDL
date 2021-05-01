@@ -1,0 +1,12 @@
+entity problema2 is
+	port (a,b:in bit; m,n:out bit);
+	end problema2;
+	architecture primeira of problema2 is
+	begin
+	
+	m<='1' when a = b;
+	
+	n<='1' when a = not a;
+	
+	end primeira;
+	

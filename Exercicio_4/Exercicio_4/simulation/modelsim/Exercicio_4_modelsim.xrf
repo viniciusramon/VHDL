@@ -1,0 +1,17 @@
+vendor_name = ModelSim
+source_file = 1, E:/ViniciusRamon/Digital/Exercicio_4/nand2fiel.vhd
+source_file = 1, E:/ViniciusRamon/Digital/Exercicio_4/Problema_2.vhd
+source_file = 1, E:/ViniciusRamon/Digital/Exercicio_4/Top.bdf
+source_file = 1, E:/ViniciusRamon/Digital/Exercicio_4/Problema_3.vhd
+source_file = 1, E:/ViniciusRamon/Digital/Exercicio_4/Top_2.bdf
+source_file = 1, E:/ViniciusRamon/Digital/Exercicio_4/Problema_4.vhd
+source_file = 1, E:/ViniciusRamon/Digital/Exercicio_4/db/Exercicio_4.cbx.xml
+source_file = 1, c:/altera/11.1sp2/quartus/libraries/vhdl/ieee/prmtvs_b.vhd
+source_file = 1, c:/altera/11.1sp2/quartus/libraries/vhdl/ieee/prmtvs_p.vhd
+source_file = 1, c:/altera/11.1sp2/quartus/libraries/vhdl/ieee/timing_b.vhd
+source_file = 1, c:/altera/11.1sp2/quartus/libraries/vhdl/ieee/timing_p.vhd
+design_name = problema_4
+instance = comp, \saida~output\, saida~output, problema_4, 1
+instance = comp, \clk~input\, clk~input, problema_4, 1
+instance = comp, \meuff~0\, meuff~0, problema_4, 1
+instance = comp, \reset~input\, reset~input, problema_4, 1
