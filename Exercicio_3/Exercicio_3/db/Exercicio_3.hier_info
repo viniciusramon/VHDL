@@ -1,0 +1,7 @@
+|Exercicio_3
+CLK => inst.CLK
+CLK => inst1.CLK
+EN => inst3.IN1
+EN => inst2.IN1
+
+
