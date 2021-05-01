@@ -1,0 +1,104 @@
+﻿LIBRARY ieee;
+Use ieee.std_logic_arith.all;
+Use ieee.std_logic_unsigned.all;
+Use ieee.std_logic_1164.all;
+
+Entity sensor_carrinho is
+	Port(clk, clk_1ms, echo1, echo2 : in std_logic --clk sera o clock da placa e clk_1ms para contar de 1 a 18ms(clk auxliar 			trigger1, trigger2, reset_sensores, sinal_uc1, sinal_uc2 : out std_logic      -—por divisor de frequencia
+			);
+End sensor_carrinho;  
+
+Architecture logica of sensor_carrinho is
+	Variable Contador_tempo1: integer range 0 to 30;--como vai precisar contar ate 18,
+ 							--são 5 bits e com 5 bits pode-se contar de 0 a 31
+	Variable Contador_tempo2: integer range 0 to 30;--como vai precisar contar ate 18,
+ 							--são 5 bits e com 5 bits pode-se contar de 0 a 31
+	Variable Contador_tempo3: integer range 0 to 30;--como vai precisar contar ate 18,
+ 							--são 5 bits e com 5 bits pode-se contar de 0 a 31
+	Variable Contador_tempo4: integer range 0 to 30;--como vai precisar contar ate 18,
+ 							--são 5 bits e com 5 bits pode-se contar de 0 a 31
+	Variable Sensor_ativo: integer range 1 to 4; --para selecionar o sensor em operação
+	Variable timeout1, timeout2, timeout3, timeout4: integer range 1 to 30; --para colocar um temporizar de timeout qdo ocorrer o erro
+	Variable reset_timer: integer range 0 to 2; --usado para executar o reset dos sensores
+	Variable Contador_congela_saidas: integer range 0 to 5; --usar para manter as saídas durante 5ms para poder ler com o uC 
+
+begin
+
+Process(clk, echo1, echo2)
+
+Begin
+	
+	if ((echo1= '0') and (echo2 = '0') and (Sensor_ativo = 0) and (reset_sensores=0) and (timeout=0)) then --esta logic eh para iniciar o processo de
+		Sensor_ativo=1; --varredura dos sensores
+		trigger1 = '1'; --trigger do primeiro sensor para iniciar leitura
+	end if;
+
+	
+	
+	if ((falling_edge echo1) or (timeout > 19)) then -- fim do processo do 1º sensor
+		Sensor_ativo=2;	
+		trigger2 = '1'; --trigger do segundo sensor para iniciar leitura
+	elsif ((falling_edge echo2) or (timeout > 19)) then -- fim do processo do 2º sensor
+			Sensor_ativo=1; -- coloca o sensor 1 como ativo
+			trigger1 = '1';--novamente trigger do 1º sensor, neste ponto ocorre o loop de scan do ultimo para o 1º sensor	
+	end if;
+	
+	trigger1 = '0';
+	trigger2 = '0';
+
+	
+	if ((falling_edge echo2) and (timeout1>19) or (timeout2>19)) then --detecta o fim do scan e se ocorreu algum erro inicia o reset dos sensores
+		reset_sensores = '1'; --qdo colocar reset_sensores em nível alto, os sensores serão desligados por 1ms
+		else reset_sensores = '0';
+	elsif ((falling_edge echo2) and (timeout1<19) and (timeout2<19)) then
+		timeout1 = 0;--como não ocorreu nenhum erro, reset de todos os tempos usados
+		timeout2 = 0;
+		timeout3 = 0;
+		timeout4 = 0;
+		Contador_tempo1 = 0;
+		Contador_tempo2 = 0;
+		Contador_tempo3 = 0;
+		Contador_tempo4 = 0;
+	end if;
+	
+	if reset_sensores=1 then
+		reset_sensores = '0';--depois de 1ms os sensores são reenergizados
+		timeout1 = 0;
+		timeout2 = 0;
+		timeout3 = 0;
+		timeout4 = 0;
+	elsif reset_sensores=2 then
+		reset_sensores = '0'; -- zera variavel reset sensores para permitir inicio do scan
+		sensor_ativo=0;
+		timeout1 = 0;
+		timeout2 = 0;
+		timeout3 = 0;
+		timeout4 = 0;
+	end if;
+
+end process;
+
+	--Este bloco faz a comparação entre os sensor traseiro e frontal
+	if Contador_tempo1<Contador_tempo2 then
+		sinal_uc1 = '1';
+		sinal_uc0 = '0';
+	elsif Contador_tempo2<Contador_tempo1 then
+		sinal_uc1 = '0';
+		sinal_uc0 = '1';
+	elsif Contador_tempo1=Contador_tempo2 then
+		sinal_uc1 = '1';
+		sinal_uc0 = '1'; 
+	else
+		sinal_uc1 = '0';
+		sinal_uc0 = '0';
+	end if;
+	
+	if ((echo1 = 1) and (clk_1ms = '1')) then
+		Contador_tempo1 = Contador_tempo1 + 1; --falta colocar uma maneira de fazer reset do contador qdo não ocorrer erro
+	end if;	
+	if ((echo2 = 1) and (clk_1ms = '1')) then
+		Contador_tempo1 = Contador_tempo1 + 1;
+	end if;	
+	
+
+end logica;

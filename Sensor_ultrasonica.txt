@@ -1,0 +1,62 @@
+Library IEEE;
+USE IEEE.std_logic_1164.ALL;
+
+Entity Contador is
+	Port(Clk_cristal, Clk_uC: in std_logic;--Entrada de clk (usar clock de 1ms do microcontrolador)
+		  Out_Sensor1, Out_Sensor2, Out_Sensor3, Out_Sensor4: in std_logic;--Entradas para FPGA, sao saidas do sensor que indicam o tempo
+		  Start_Sensor: out std_logic_vector (1 to 4);--Para iniciar o processo do sensor para medir distancia
+		  uC_signal: out std_logic_vector (0 to 3);--
+		  Reset: out std_logic)--Para desligar sensor em caso de defeito
+End Contador;
+
+Architeture Logica of Contador is
+--type Sensor(Start, tempo)
+VARIABLE TempoContador1: INTEGER RANGE 0 TO 31;
+VARIABLE TempoContador2: INTEGER RANGE 0 TO 31;
+VARIABLE TempoContador3: INTEGER RANGE 0 TO 31;
+VARIABLE TempoContador4: INTEGER RANGE 0 TO 31;
+Variable Seleciona_Sensor: INTEGER RANGE 1 TO 4;
+
+Process(Clk, Out_Sensor)
+Begin
+	if Out_Sensor1='0' and Out_Sensor2='0' and Out_Sensor3='0' and Out_Sensor4='0' and Seleciona_Sensor = 0 then
+		Start_Sensor(1) = '1';
+		Seleciona_Sensor = 1;
+	elsif falling_edge(Out_Sensor1) then
+		if Out_Sensor1='0' and Out_Sensor2='0' and Out_Sensor3='0' and Out_Sensor4='0' and Seleciona_Sensor = 1 then
+			Start_Sensor(2) = '1';
+			Seleciona_Sensor = 2;
+	elsif falling_edge(out_Sensor(2)) then
+		if Out_Sensor1='0' and Out_Sensor2='0' and Out_Sensor3='0' and Out_Sensor4='0' and Seleciona_Sensor = 2 then
+			Start_Sensor(3) = '1';
+			Seleciona_Sensor = 3;
+	elsif falling_edge(out_Sensor(3)) then
+		if Out_Sensor1='0' and Out_Sensor2='0' and Out_Sensor3='0' and Out_Sensor4='0' and Seleciona_Sensor = 3 then
+			Start_Sensor(4) = '1';
+			Seleciona_Sensor = 4;
+	elsif falling_edge(out_Sensor(4)) then
+		if Out_Sensor1='0' and Out_Sensor2='0' and Out_Sensor3='0' and Out_Sensor4='0' and Seleciona_Sensor = 4 then
+			Start_Sensor(1) = '1';
+			Seleciona_Sensor = 1;
+	end if;
+	
+	Start_Sensor(1) = '0';
+	Start_Sensor(2) = '0';
+	Start_Sensor(3) = '0';
+	Start_Sensor(4) = '0';
+	
+	if falling_edge(out_Sensor(4)) then
+		if TempoContador1 > TempoContador2 and TempoContador1 > TempoContador3 and TempoContador1 > TempoContador4 then
+			uC_signal = '0001';
+		elsif TempoContador2 > TempoContador1 and TempoContador2 > TempoContador3 and TempoContador2 > TempoContador4 then
+			uC_signal = '0010';
+		elsif TempoContador3 > TempoContador1 and TempoContador3 > TempoContador2 and TempoContador3 > TempoContador4 then
+			uC_signal = '0100';
+		elsif TempoContador4 > TempoContador1 and TempoContador4 > TempoContador2 and TempoContador4 > TempoContador3 then
+			uC_signal = '1000';
+		elsif uC_signal = '0000';
+	end if;
+end process
+
+end Logica;
+		  
