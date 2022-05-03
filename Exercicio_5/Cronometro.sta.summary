@@ -1,0 +1,77 @@
+------------------------------------------------------------
+TimeQuest Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1200mV 85C Model Setup '50MHz'
+Slack : -2.146
+TNS   : -33.432
+
+Type  : Slow 1200mV 85C Model Setup 'lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated|counter_reg_bit[23]'
+Slack : -1.103
+TNS   : -14.291
+
+Type  : Slow 1200mV 85C Model Hold '50MHz'
+Slack : -0.160
+TNS   : -0.160
+
+Type  : Slow 1200mV 85C Model Hold 'lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated|counter_reg_bit[23]'
+Slack : 0.403
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width '50MHz'
+Slack : -3.000
+TNS   : -33.840
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated|counter_reg_bit[23]'
+Slack : -1.285
+TNS   : -21.845
+
+Type  : Slow 1200mV 0C Model Setup '50MHz'
+Slack : -1.804
+TNS   : -27.300
+
+Type  : Slow 1200mV 0C Model Setup 'lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated|counter_reg_bit[23]'
+Slack : -0.880
+TNS   : -11.465
+
+Type  : Slow 1200mV 0C Model Hold '50MHz'
+Slack : -0.073
+TNS   : -0.073
+
+Type  : Slow 1200mV 0C Model Hold 'lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated|counter_reg_bit[23]'
+Slack : 0.355
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width '50MHz'
+Slack : -3.000
+TNS   : -33.840
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated|counter_reg_bit[23]'
+Slack : -1.285
+TNS   : -21.845
+
+Type  : Fast 1200mV 0C Model Setup '50MHz'
+Slack : -0.557
+TNS   : -5.100
+
+Type  : Fast 1200mV 0C Model Setup 'lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated|counter_reg_bit[23]'
+Slack : -0.026
+TNS   : -0.026
+
+Type  : Fast 1200mV 0C Model Hold '50MHz'
+Slack : -0.218
+TNS   : -0.218
+
+Type  : Fast 1200mV 0C Model Hold 'lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated|counter_reg_bit[23]'
+Slack : 0.182
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width '50MHz'
+Slack : -3.000
+TNS   : -28.320
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated|counter_reg_bit[23]'
+Slack : -1.000
+TNS   : -17.000
+
+------------------------------------------------------------

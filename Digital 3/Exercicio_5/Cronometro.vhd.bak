@@ -1,0 +1,7 @@
+
+entity cronometro is
+port(start,stop,clk : in std_logic;
+saida : out std_logic_vector);
+end cronometro;
+
+architecture primeira of cronometro is

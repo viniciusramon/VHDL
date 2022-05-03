@@ -1,0 +1,52 @@
+# Reading C:/altera/11.1sp2/modelsim_ase/tcl/vsim/pref.tcl 
+# do Exercicio_4_run_msim_gate_vhdl.do 
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Copying C:\altera\11.1sp2\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\11.1sp2\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {Exercicio_4.vho}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Loading package cycloneiv_atom_pack
+# -- Loading package cycloneiv_components
+# -- Compiling entity problema_4
+# -- Compiling architecture structure of problema_4
+# 
+vsim -voptargs=+acc work.problema_4
+# vsim -voptargs=+acc work.problema_4 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading cycloneiv.cycloneiv_atom_pack(body)
+# Loading cycloneiv.cycloneiv_components
+# Loading work.problema_4(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cycloneiv.cycloneiv_io_obuf(arch)
+# Loading cycloneiv.cycloneiv_io_ibuf(arch)
+# Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
+# Loading altera.dffeas(vital_dffeas)
+add wave -position insertpoint  \
+sim:/problema_4/saida \
+sim:/problema_4/clk \
+sim:/problema_4/reset
+force -freeze sim:/problema_4/reset 1 0
+force -freeze sim:/problema_4/clk 1 0, 0 {100000 ps} -r 200ns
+run 500ns
+noforce sim:/problema_4/reset
+run 1500ns

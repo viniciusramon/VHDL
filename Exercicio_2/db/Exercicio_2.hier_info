@@ -1,0 +1,11 @@
+|Exercicio_2_Semaforo
+CLK => Q2.CLK
+CLK => Q3.CLK
+FIM => inst.IN1
+FIM => inst7.IN0
+FIM => inst3.IN2
+FIM => inst11.IN2
+FIM => inst13.IN0
+FIM => inst12.IN0
+
+

@@ -1,0 +1,128 @@
+Flow report for Exercicio_2
+Sat Feb 21 12:57:33 2015
+Quartus II 32-bit Version 11.1 Build 259 01/25/2012 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2011 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------+
+; Flow Summary                                                                       ;
++------------------------------------+-----------------------------------------------+
+; Flow Status                        ; Successful - Sat Feb 21 12:57:33 2015         ;
+; Quartus II 32-bit Version          ; 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition ;
+; Revision Name                      ; Exercicio_2                                   ;
+; Top-level Entity Name              ; Exercicio_2_Semaforo                          ;
+; Family                             ; Cyclone IV GX                                 ;
+; Total logic elements               ; 6 / 14,400 ( < 1 % )                          ;
+;     Total combinational functions  ; 6 / 14,400 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 2 / 14,400 ( < 1 % )                          ;
+; Total registers                    ; 2                                             ;
+; Total pins                         ; 7 / 81 ( 9 % )                                ;
+; Total virtual pins                 ; 0                                             ;
+; Total memory bits                  ; 0 / 552,960 ( 0 % )                           ;
+; Embedded Multiplier 9-bit elements ; 0                                             ;
+; Total GXB Receiver Channel PCS     ; 0 / 2 ( 0 % )                                 ;
+; Total GXB Receiver Channel PMA     ; 0 / 2 ( 0 % )                                 ;
+; Total GXB Transmitter Channel PCS  ; 0 / 2 ( 0 % )                                 ;
+; Total GXB Transmitter Channel PMA  ; 0 / 2 ( 0 % )                                 ;
+; Total PLLs                         ; 0 / 3 ( 0 % )                                 ;
+; Device                             ; EP4CGX15BF14C6                                ;
+; Timing Models                      ; Final                                         ;
++------------------------------------+-----------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 02/21/2015 12:57:20 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Exercicio_2         ;
++-------------------+---------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                           ;
++-------------------------------------+------------------------------+---------------+----------------------+----------------+
+; Assignment Name                     ; Value                        ; Default Value ; Entity Name          ; Section Id     ;
++-------------------------------------+------------------------------+---------------+----------------------+----------------+
+; COMPILER_SIGNATURE_ID               ; 167739689152.142453064003460 ; --            ; --                   ; --             ;
+; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                         ; --            ; --                   ; eda_simulation ;
+; EDA_RUN_TOOL_AUTOMATICALLY          ; On                           ; --            ; --                   ; eda_simulation ;
+; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)       ; <None>        ; --                   ; --             ;
+; PARTITION_COLOR                     ; 16764057                     ; --            ; Exercicio_2_Semaforo ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; PLACEMENT_AND_ROUTING        ; --            ; Exercicio_2_Semaforo ; Top            ;
+; PARTITION_NETLIST_TYPE              ; SOURCE                       ; --            ; Exercicio_2_Semaforo ; Top            ;
+; TOP_LEVEL_ENTITY                    ; Exercicio_2_Semaforo         ; Exercicio_2   ; --                   ; --             ;
++-------------------------------------+------------------------------+---------------+----------------------+----------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                             ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis      ; 00:00:02     ; 1.0                     ; 292 MB              ; 00:00:02                           ;
+; Fitter                    ; 00:00:05     ; 1.0                     ; 370 MB              ; 00:00:04                           ;
+; Assembler                 ; 00:00:02     ; 1.0                     ; 289 MB              ; 00:00:02                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 298 MB              ; 00:00:03                           ;
+; EDA Netlist Writer        ; 00:00:01     ; 1.0                     ; 248 MB              ; 00:00:01                           ;
+; Total                     ; 00:00:13     ; --                      ; --                  ; 00:00:12                           ;
++---------------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++----------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                        ;
++---------------------------+------------------+-----------+------------+----------------+
+; Module Name               ; Machine Hostname ; OS Name   ; OS Version ; Processor type ;
++---------------------------+------------------+-----------+------------+----------------+
+; Analysis & Synthesis      ; LAB14-20         ; Windows 7 ; 6.1        ; i686           ;
+; Fitter                    ; LAB14-20         ; Windows 7 ; 6.1        ; i686           ;
+; Assembler                 ; LAB14-20         ; Windows 7 ; 6.1        ; i686           ;
+; TimeQuest Timing Analyzer ; LAB14-20         ; Windows 7 ; 6.1        ; i686           ;
+; EDA Netlist Writer        ; LAB14-20         ; Windows 7 ; 6.1        ; i686           ;
++---------------------------+------------------+-----------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Exercicio_2 -c Exercicio_2
+quartus_fit --read_settings_files=off --write_settings_files=off Exercicio_2 -c Exercicio_2
+quartus_asm --read_settings_files=off --write_settings_files=off Exercicio_2 -c Exercicio_2
+quartus_sta Exercicio_2 -c Exercicio_2
+quartus_eda --read_settings_files=off --write_settings_files=off Exercicio_2 -c Exercicio_2
+
+
+

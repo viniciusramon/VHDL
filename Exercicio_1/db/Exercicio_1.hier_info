@@ -1,0 +1,6 @@
+|Exercicio_1
+CLK => Q0.CLK
+CLK => Q1.CLK
+H => inst13.IN1
+
+

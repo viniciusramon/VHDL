@@ -1,0 +1,49 @@
+Info: Start Nativelink Simulation process
+
+========= EDA Simulation Settings =====================
+
+Sim Mode              :  Gate
+Family                :  cycloneive
+Quartus root          :  c:/altera/11.1sp2/quartus/bin/
+Quartus sim root      :  c:/altera/11.1sp2/quartus/eda/sim_lib
+Simulation Tool       :  modelsim-altera
+Simulation Language   :  vhdl
+Version               :  93
+Simulation Mode       :  GUI
+Sim Output File       :  Exercicio_3.vho
+Sim SDF file          :  Exercicio_3__vhdl.sdo
+Sim dir               :  simulation\modelsim
+
+=======================================================
+
+Info: Starting NativeLink simulation with ModelSim-Altera software
+Sourced NativeLink script c:/altera/11.1sp2/quartus/common/tcl/internal/nativelink/modelsim.tcl
+Warning: File Exercicio_3_run_msim_gate_vhdl.do already exists - backing up current file as Exercicio_3_run_msim_gate_vhdl.do.bak1
+Probing transcript
+ModelSim-Altera Info: # Reading C:/altera/11.1sp2/modelsim_ase/tcl/vsim/pref.tcl 
+ModelSim-Altera Info: # do Exercicio_3_run_msim_gate_vhdl.do 
+ModelSim-Altera Info: # if {[file exists gate_work]} {
+ModelSim-Altera Info: # 	vdel -lib gate_work -all
+ModelSim-Altera Info: # }
+ModelSim-Altera Info: # vlib gate_work
+ModelSim-Altera Info: # vmap work gate_work
+ModelSim-Altera Info: # Copying C:\altera\11.1sp2\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+ModelSim-Altera Info: # Modifying modelsim.ini
+ModelSim-Altera Warning: # ** Warning: Copied C:\altera\11.1sp2\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+ModelSim-Altera Info: #          Updated modelsim.ini.
+ModelSim-Altera Info: # 
+ModelSim-Altera Info: # vcom -93 -work work {Exercicio_3.vho}
+ModelSim-Altera Info: # Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+ModelSim-Altera Info: # -- Loading package STANDARD
+ModelSim-Altera Info: # -- Loading package TEXTIO
+ModelSim-Altera Info: # -- Loading package std_logic_1164
+ModelSim-Altera Info: # -- Loading package VITAL_Timing
+ModelSim-Altera Info: # -- Loading package VITAL_Primitives
+ModelSim-Altera Info: # -- Loading package dffeas_pack
+ModelSim-Altera Info: # -- Loading package altera_primitives_components
+ModelSim-Altera Info: # -- Loading package cycloneive_atom_pack
+ModelSim-Altera Info: # -- Loading package cycloneive_components
+ModelSim-Altera Info: # -- Compiling entity Exercicio_3
+ModelSim-Altera Info: # -- Compiling architecture structure of Exercicio_3
+ModelSim-Altera Info: # 
+Info: NativeLink simulation flow was successful

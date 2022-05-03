@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Sat Feb 14 12:50:21 2015
+Quartus II 32-bit Version : 11.1 Build 259 01/25/2012 SP 2 SJ Web Edition
+Revision Name : Exercicio_1
+Top-level Entity Name : Exercicio_1
+Family : Cyclone IV GX
+Total logic elements : 6
+    Total combinational functions : 6
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 6
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

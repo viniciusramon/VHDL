@@ -1,0 +1,131 @@
+|Divisor_Frequencia
+START => cronometro:inst.start
+STOP => cronometro:inst.stop
+50MHz => lpm_counter1:inst2.clock
+
+
+|Divisor_Frequencia|cronometro:inst
+start => operando.ACLR
+start => contador[0].ACLR
+start => contador[1].ACLR
+start => contador[2].ACLR
+start => contador[3].ACLR
+start => contador[4].ACLR
+start => contador[5].ACLR
+start => contador[6].ACLR
+start => contador[7].ACLR
+start => saida[7]~reg0.ENA
+start => saida[6]~reg0.ENA
+start => saida[5]~reg0.ENA
+start => saida[4]~reg0.ENA
+start => saida[3]~reg0.ENA
+start => saida[2]~reg0.ENA
+start => saida[1]~reg0.ENA
+start => saida[0]~reg0.ENA
+stop => contador.OUTPUTSELECT
+stop => contador.OUTPUTSELECT
+stop => contador.OUTPUTSELECT
+stop => contador.OUTPUTSELECT
+stop => contador.OUTPUTSELECT
+stop => contador.OUTPUTSELECT
+stop => contador.OUTPUTSELECT
+stop => contador.OUTPUTSELECT
+stop => operando.OUTPUTSELECT
+stop => saida.OUTPUTSELECT
+stop => saida.OUTPUTSELECT
+stop => saida.OUTPUTSELECT
+stop => saida.OUTPUTSELECT
+stop => saida.OUTPUTSELECT
+stop => saida.OUTPUTSELECT
+stop => saida.OUTPUTSELECT
+stop => saida.OUTPUTSELECT
+clk => saida[0]~reg0.CLK
+clk => saida[1]~reg0.CLK
+clk => saida[2]~reg0.CLK
+clk => saida[3]~reg0.CLK
+clk => saida[4]~reg0.CLK
+clk => saida[5]~reg0.CLK
+clk => saida[6]~reg0.CLK
+clk => saida[7]~reg0.CLK
+clk => operando.CLK
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+clk => contador[3].CLK
+clk => contador[4].CLK
+clk => contador[5].CLK
+clk => contador[6].CLK
+clk => contador[7].CLK
+
+
+|Divisor_Frequencia|lpm_counter1:inst2
+clock => lpm_counter:LPM_COUNTER_component.clock
+
+
+|Divisor_Frequencia|lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component
+clock => cntr_sqh:auto_generated.clock
+clk_en => ~NO_FANOUT~
+cnt_en => ~NO_FANOUT~
+updown => ~NO_FANOUT~
+aclr => ~NO_FANOUT~
+aset => ~NO_FANOUT~
+aconst => ~NO_FANOUT~
+aload => ~NO_FANOUT~
+sclr => ~NO_FANOUT~
+sset => ~NO_FANOUT~
+sconst => ~NO_FANOUT~
+sload => ~NO_FANOUT~
+data[0] => ~NO_FANOUT~
+data[1] => ~NO_FANOUT~
+data[2] => ~NO_FANOUT~
+data[3] => ~NO_FANOUT~
+data[4] => ~NO_FANOUT~
+data[5] => ~NO_FANOUT~
+data[6] => ~NO_FANOUT~
+data[7] => ~NO_FANOUT~
+data[8] => ~NO_FANOUT~
+data[9] => ~NO_FANOUT~
+data[10] => ~NO_FANOUT~
+data[11] => ~NO_FANOUT~
+data[12] => ~NO_FANOUT~
+data[13] => ~NO_FANOUT~
+data[14] => ~NO_FANOUT~
+data[15] => ~NO_FANOUT~
+data[16] => ~NO_FANOUT~
+data[17] => ~NO_FANOUT~
+data[18] => ~NO_FANOUT~
+data[19] => ~NO_FANOUT~
+data[20] => ~NO_FANOUT~
+data[21] => ~NO_FANOUT~
+data[22] => ~NO_FANOUT~
+data[23] => ~NO_FANOUT~
+cin => ~NO_FANOUT~
+
+
+|Divisor_Frequencia|lpm_counter1:inst2|lpm_counter:LPM_COUNTER_component|cntr_sqh:auto_generated
+clock => counter_reg_bit[23].CLK
+clock => counter_reg_bit[22].CLK
+clock => counter_reg_bit[21].CLK
+clock => counter_reg_bit[20].CLK
+clock => counter_reg_bit[19].CLK
+clock => counter_reg_bit[18].CLK
+clock => counter_reg_bit[17].CLK
+clock => counter_reg_bit[16].CLK
+clock => counter_reg_bit[15].CLK
+clock => counter_reg_bit[14].CLK
+clock => counter_reg_bit[13].CLK
+clock => counter_reg_bit[12].CLK
+clock => counter_reg_bit[11].CLK
+clock => counter_reg_bit[10].CLK
+clock => counter_reg_bit[9].CLK
+clock => counter_reg_bit[8].CLK
+clock => counter_reg_bit[7].CLK
+clock => counter_reg_bit[6].CLK
+clock => counter_reg_bit[5].CLK
+clock => counter_reg_bit[4].CLK
+clock => counter_reg_bit[3].CLK
+clock => counter_reg_bit[2].CLK
+clock => counter_reg_bit[1].CLK
+clock => counter_reg_bit[0].CLK
+
+

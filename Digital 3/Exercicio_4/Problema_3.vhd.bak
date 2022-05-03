@@ -1,0 +1,16 @@
+LIBRARY ieee
+Use ieee.std_logic_arith.all;
+Use ieee.std_logic_unsigned.all;
+Use ieee.std_logic_1164.all;
+
+ENTITY problema_3 is
+PORT(a,b:in std_logic; m,n:out std_logic);
+END problema_3;
+
+ARCHITECTURE primeira of problema_3 is
+BEGIN 
+
+m <= '1' when a=b else '0';
+n <= a xor b;
+
+END primeira;
